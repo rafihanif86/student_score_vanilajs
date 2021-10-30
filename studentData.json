@@ -1,0 +1,17 @@
+[
+    ["123", "Hula", "Math", "UTS", 8],
+    ["123", "Hula", "Math", "UAS", 7],
+    ["123", "Hula", "History", "UTS", 6],
+    ["123", "Hula", "History", "UAS", 5],
+    ["123", "Hula", "History", "Project", 4],
+    ["456", "Bobo", "Math", "UTS", 10],
+    ["456", "Bobo", "Math", "UAS", null],
+    ["456", "Bobo", "History", "UTS", 6],
+    ["456", "Bobo", "History", "UAS", 5],
+    ["456", "Bobo", "History", "Project", null],
+    ["789", "Luna", "Math", "UTS", 10],
+    ["789", "Luna", "Math", "UAS", null],
+    ["789", "Luna", "History", "UTS", 6],
+    ["789", "Luna", "History", "UAS", 5],
+    ["789", "Luna", "History", "Project", null]
+]

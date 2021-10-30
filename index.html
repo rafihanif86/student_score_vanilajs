@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Student Score</title>
+</head>
+<body>
+    <header>
+        <h1>Student Score</h1>
+    </header>
+
+    <div class="container">
+        <form>
+          <div class="row">
+            <div class="col-25">
+                <input type="text" id="nrp" class="nrp" placeholder="NRP">
+            </div>
+            <div class="col-75">
+              <input type="text" id="name" name="firstname" placeholder="Student Name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-40">
+                <input type="text" id="subject" class="subject" placeholder="Subject">
+            </div>
+            <div class="col-40">
+                <input type="text" id="test" class="test" placeholder="Test">
+            </div>
+            <div class="col-20">
+                <input type="text" id="test-score" class="test-score" placeholder="Score">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-100">
+                <button id="submit-button" type="button" class="submit-button">Add</button>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <div id="datas" >
+    </div>
+    
+
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
