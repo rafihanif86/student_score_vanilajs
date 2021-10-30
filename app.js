@@ -6,9 +6,8 @@ var nrpArr = [];
 var nrpList = [];
 var studentDataObj = [];
 
-
+//first run
 defaultData();
-console.log('data ', studentArr);
 dataShow();
 
 //Event Listeners
@@ -17,7 +16,6 @@ document.getElementById('submit-button').onclick = function(){
 }
 
 //Function
-
 function defaultData(){
     dataStudent = [
         ["123", "Hula", "Math", "UTS", 8],
@@ -36,7 +34,6 @@ function defaultData(){
         ["789", "Luna", "History", "UAS", 5],
         ["789", "Luna", "History", "Project", null]
     ];
-    console.log('student',dataStudent);
 }
 
 function dataShow(){
@@ -85,11 +82,7 @@ function dataShow(){
         }
         studentDataObj.push([nrpList[a],name,scoreData]);
 
-        console.log('scoreData', scoreData);
-
-        console.log('subject', subject);
-        console.log('final score', finalscore);
-
+        //dinamic data show
         var datas = document.getElementById('datas');
 
         const containerDiv = document.createElement("div");
@@ -149,13 +142,20 @@ function dataShow(){
             const divCol6 = document.createElement("div");
             divCol6.classList.add('col-70');
             for(let b = 1; b <= scoreData[i].length-1; b++){
-                divCol6.innerHTML+='<p>'+scoreData[i][b][0]+' : ' + scoreData[i][b][1] +'</p>'
-            }
+                var num = 0;
+                if(scoreData[i][b][1] == null){
+                    num = '<div class="redScore">'+scoreData[i][b][0]+' : '+ 0 + '</div>';
+                }else if (scoreData[i][b][1] < finalscore[i]){
+                    num = '<div class="redScore">'+scoreData[i][b][0]+' : '+ scoreData[i][b][1] + '</div>';
+                }else{
+                    num = '<p>'+scoreData[i][b][0]+' : ' + scoreData[i][b][1] +'</p>';
+                }
+                divCol6.innerHTML+= num }
             row4.appendChild(divCol6);
 
         }
         datas.appendChild(containerDiv);    
-        console.log('student data', studentDatas);
+        // console.log('student data', studentDatas);
 
     }
 }
@@ -170,7 +170,7 @@ function addData(event){
     dataStudent.push([inNrp,inStudent,inSubject, inTest, inTestScore]);
 }
 
-console.log('student data obj', studentDataObj);
+// console.log('student data obj', studentDataObj);
 
 function median(values){
     if(values.length ===0) throw new Error("No inputs");
